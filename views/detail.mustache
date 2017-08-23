@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title></title>
+  </head>
+  <body>
+    <h1 id="detailHeader">{{game.game}}</h1>
+    <div class="editFunctions">
+      <a id="editLink" href="/games/{{game._id}}/edit">Edit</a>
+      <a id="deleteLink" href="/games/{{game._id}}/delete">Delete</a>
+    </div>
+    <div class="gameInfo">
+      <div class="locationInfo">
+        {{#game}}
+        Mostly Played In: {{mostlyPlayedIn}}
+        {{/game}}
+      </div>
+      <div class="numberOfCards">
+        {{#game}}
+        Cards Dealt to Player: {{cardsDealtToPlayer}}
+        {{/game}}
+      </div>
+    </div>
+  </body>
+</html>

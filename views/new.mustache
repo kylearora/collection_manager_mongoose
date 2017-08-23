@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Poker Games</title>
+  </head>
+  <body>
+    <h1 id="newHeader">Add a new Poker Game</h1>
+    <div class="formDiv">
+      <form class="inputInfo" action="/games" method="post">
+
+        <div class="gameName">
+          <label for="gameName">Name of Game:</label>
+          <input type="text" name="gameName" value="">{{#errors.game}}Name is required{{/errors.game}}
+        </div>
+        <div class="playedIn">
+          <label for="">Location Most Played In:</label>
+          <input type="text" name="playedIn" value="">
+        </div>
+        <div class="cardsDealt">
+          <label for="">Number of Cards Dealt to Player:</label>
+          <input type="number" name="cardsDealt" value="">{{#errors.cardsDealtToPlayer}}Please enter the number of cards dealt to the player{{/errors.cardsDealtToPlayer}}
+        </div>
+
+        <button id="newButton" type="submit" name="submitButton" value="">Add New Game</button>
+      </form>
+    </div>
+  </body>
+</html>
